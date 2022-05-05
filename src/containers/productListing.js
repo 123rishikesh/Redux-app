@@ -1,28 +1,33 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useSelector,useDispatch} from 'react-redux';
 import ProductComponent from './productComponent';
 import axios from 'axios';
-import {setProducts} from '../redux/actions/productActions'
+import {getProducts} from '../redux/actions/productActions'
 
 const ProductListing = () => {
 
+   
+    const [loader, setLoader] = useState(true);
     const products = useSelector(state => state);
     const dispatch = useDispatch();
-    console.log("products",products);
+  
 const fetchProducts = async () => {
-
+   
    const response = await axios.get('https://fakestoreapi.com/products')
+   .then( res => {dispatch(getProducts(res.data));  })
    .catch((err) => {
        console.log("Error", err);
    });
-   dispatch(setProducts(response.data))
+   setLoader(false)
 };
 
     useEffect(() => {fetchProducts()},[]);
 
     return (
-        <div className="ui grid container">
-            <ProductComponent/>
+        <div className="container-fluid">
+            <div className='row'>
+            <ProductComponent loader={loader}/>
+            </div>
         </div>
         );
 

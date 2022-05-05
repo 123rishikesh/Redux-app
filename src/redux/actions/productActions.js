@@ -1,17 +1,33 @@
 import { ActionTypes } from "../constants/action-types";
 
-export const setProducts = (products) => {
+export const getProducts = (products) => {
 
     return {
-        type: ActionTypes.SET_PRODUCTS,
+        type: ActionTypes.GET_PRODUCTS,
         payload: products,
     };
 };
 
-export const selectedProduct = (product) => {
+export const viewProductDetail = (product) => {
 
     return {
-        type: ActionTypes.SELECTED_PRODUCT,
+        type: ActionTypes. VIEW_PRODUCT_DETAIL,
         payload: product,
     };
 };
+
+export const ADD = (item) => {
+
+    return {
+        type:ActionTypes.ADD_CART,
+        payload:item
+    }
+}
+
+export const DELETE = (id) => {
+
+    return {
+        type:ActionTypes.REMOVE_CART,
+        payload:id
+    }
+}

@@ -1,8 +1,17 @@
-.card-image img{
+.card-image img {
   width: 100px;
- 
+  min-height: 200px;
+  transition: width 2s;
 }
 
-/* .card{
- 
-} */
+.card-image img:hover {
+  width: 400px;
+}
+
+div .justify-content-center {
+  width: 800px;
+  height: 400px;
+  position: relative;
+  top: 150px;
+  left: 250px;
+}
