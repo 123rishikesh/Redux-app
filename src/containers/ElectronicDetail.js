@@ -8,17 +8,16 @@ import Header from './Header';
 import Loader from './Loader';
 import './productComponent.css';
 
-const ProductDetail = () => {
-
+const ElectronicDetail = () => {
 
     const [loader, setLoader] = useState(true)
     const product = useSelector((state) => state.product);
     const { image, title, price, category, description } = product;
     const dispatch = useDispatch();
-    const { productId } = useParams();
+    const { id } = useParams();
 
     const fetchProductDetail = async () => {
-        const response = await axios.get(`https://fakestoreapi.com/products/${productId}`)
+        const response = await axios.get(`https://fakestoreapi.com/products/${id}`)
             .catch((error) => { console.log(error) })
 
         dispatch(viewProductDetail(response.data))
@@ -26,10 +25,10 @@ const ProductDetail = () => {
     }
 
     useEffect(() => {
-        if (productId && productId !== " ")
+        if (id && id !== " ")
             fetchProductDetail()
 
-    }, [productId])
+    }, [id])
     return (
         <div className='container-fluid'>
             <div className='row'>
@@ -54,6 +53,6 @@ const ProductDetail = () => {
         </div>
     );
 
-};
+}
 
-export default ProductDetail;
+export default ElectronicDetail;

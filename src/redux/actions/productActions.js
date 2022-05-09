@@ -11,7 +11,7 @@ export const getProducts = (products) => {
 export const viewProductDetail = (product) => {
 
     return {
-        type: ActionTypes. VIEW_PRODUCT_DETAIL,
+        type: ActionTypes.VIEW_PRODUCT_DETAIL,
         payload: product,
     };
 };
@@ -19,15 +19,15 @@ export const viewProductDetail = (product) => {
 export const ADD = (item) => {
 
     return {
-        type:ActionTypes.ADD_CART,
-        payload:item
+        type: ActionTypes.ADD_CART,
+        payload: item
     }
 }
 
 export const DELETE = (id) => {
 
     return {
-        type:ActionTypes.REMOVE_CART,
-        payload:id
+        type: ActionTypes.REMOVE_CART,
+        payload: id
     }
 }

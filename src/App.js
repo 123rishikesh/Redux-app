@@ -4,19 +4,25 @@ import ProductListing from './containers/productListing';
 import ProductDetail from './containers/productDetail';
 import CardDetails from './containers/CardDetails'
 import Header from './containers/Header';
-import 'react-toastify/dist/ReactToastify.css';
-import {toast} from 'react-toastify';
+import Electronics from './containers/Menu/Electronic';
+import Clothing from './containers/Menu/Clothing';
+import Jewelery from './containers/Menu/Jewelery';
+import ElectronicDetail from './containers/ElectronicDetail';
 
 
 function App() {
   return (
     <div className="App">
-      <div style={{display: 'none'}}><Header/></div>
+      {/* <div style={{ display: 'none' }}><Header /></div> */}
       <Router>
         <Routes>
           <Route exact path='/' element={<ProductListing />} />
           <Route path='/product/:productId' element={<ProductDetail />} />
-          <Route path='/cart/:id' element={<CardDetails/>}/>
+          <Route path='/cart/:id' element={<CardDetails />} />
+          <Route exact path='/electronics' element={<Electronics />} />
+          <Route exact path='/jewelery' element={<Jewelery />} />
+          <Route exact path='/clothing' element={<Clothing />} />
+          <Route exact path='/electronic/:id' element={<ElectronicDetail />} />
           <Route>404 Page Not Found</Route>
         </Routes>
       </Router>

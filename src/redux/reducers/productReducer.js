@@ -28,6 +28,7 @@ export const ProductDetailReducer = (state = {},{type,payload}) => {
 export const AddtoCartReducer = (state = initialstate, {type,payload}) => {
     switch(type){
         case ActionTypes.ADD_CART:
+            const quantity = 0;
             return {
                 ...state, carts: [...state.carts, payload]
             };
