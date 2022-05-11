@@ -68,7 +68,7 @@ const Header = (prop) => {
                         aria-expanded={open ? 'true' : undefined}
                         onClick={handleClick}
                     >
-                        <i class="fa-solid fa-cart-shopping text-white ms-3" style={{ fontsize: "25", cursor: "pointer" }}></i>
+                        <i className="fa-solid fa-cart-shopping text-white ms-3" style={{ fontsize: "25", cursor: "pointer" }}></i>
                     </Badge>
 
 
@@ -139,7 +139,7 @@ const Header = (prop) => {
                         <div className="container-fluid">
                             <ul className="navbar-nav">
                                 <li className="nav-item" >
-                            <NavLink to="/" className="nav-link" >Back</NavLink>
+                            <NavLink to="/" className="nav-link" > Back </NavLink>
                                 </li>
                             </ul>
                         </div>

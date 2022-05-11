@@ -1,10 +1,10 @@
 import React, {useState,useEffect} from 'react';
-import { useParams } from 'react-router-dom';
 import {useSelector,useDispatch} from 'react-redux';
 import axios from 'axios';
 import { getProducts } from '../../redux/actions/productActions';
 import Header from '../Header';
 import Footer from '../Footer';
+import {Link} from 'react-router-dom';
 
 const Jewelery = () => {
 
@@ -53,6 +53,7 @@ const Jewelery = () => {
                   
                        
                         <div key={e.id} className="col-sm-4">
+                            <Link to={`/jewelery/${e.id}`}>
                             <div className='card'>
                                 <div className='card-image'>
                                     <img src={e.image} alt="No pic"/>
@@ -61,6 +62,7 @@ const Jewelery = () => {
                                 <div>{e.title} </div>
                                 </div>
                             </div>
+                            </Link>
                         </div>
                         
                         

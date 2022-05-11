@@ -8,6 +8,8 @@ import Electronics from './containers/Menu/Electronic';
 import Clothing from './containers/Menu/Clothing';
 import Jewelery from './containers/Menu/Jewelery';
 import ElectronicDetail from './containers/ElectronicDetail';
+import ClothingDetail from './containers/ClothingDetail';
+import JeweleryDetail from './containers/JeweleryDetail';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route exact path='/jewelery' element={<Jewelery />} />
           <Route exact path='/clothing' element={<Clothing />} />
           <Route exact path='/electronic/:id' element={<ElectronicDetail />} />
+          <Route exact path='/jewelery/:id' element={<JeweleryDetail/>} />
+          <Route exact path='/clothing/:id' element={<ClothingDetail />} />
           <Route>404 Page Not Found</Route>
         </Routes>
       </Router>

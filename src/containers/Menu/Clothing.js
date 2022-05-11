@@ -5,6 +5,7 @@ import axios from 'axios';
 import { getProducts } from '../../redux/actions/productActions';
 import Header from '../Header';
 import Footer from '../Footer';
+import {Link} from 'react-router-dom';
 
 const Clothing = () => {
     const getdata = useSelector(( state => state.allProducts.products));
@@ -12,7 +13,7 @@ const Clothing = () => {
     console.log(getdata)
     console.log(data)
     const dispatch = useDispatch();
-  
+    const {id} = useParams();
 
     const filterData =  () => {
         console.log("inside filter data") 
@@ -52,6 +53,7 @@ const Clothing = () => {
                   
                        
                         <div key={e.id} className="col-sm-4">
+                            <Link to={`/clothing/${e.id}`}>
                             <div className='card'>
                                 <div className='card-image'>
                                     <img src={e.image} alt="No pic"/>
@@ -60,6 +62,7 @@ const Clothing = () => {
                                 <div>{e.title} </div>
                                 </div>
                             </div>
+                            </Link>
                         </div>
                         
                         

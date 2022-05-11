@@ -32,7 +32,7 @@ const ElectronicDetail = () => {
     return (
         <div className='container-fluid'>
             <div className='row'>
-                <Header />
+                <Header test="true"/>
             </div>
             {loader ? <div className="d-flex justify-content-center"><Loader /></div> :
                 <div className='row' style={{ marginTop: '40px' }}>
