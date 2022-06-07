@@ -157,6 +157,9 @@ const Header = (prop) => {
                         <li className="nav-item" >
                             <NavLink to="clothing" className="nav-link" >Clothing</NavLink>
                         </li>
+                        <li className="nav-item" >
+                            <NavLink to="/ProfilePage" className="nav-link" >Profile</NavLink>
+                        </li>
                         {/* <li className="nav-item" >
                             <a className="nav-link" href="#">Add to Cart</a>
                         </li> */}

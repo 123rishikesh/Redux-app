@@ -1,0 +1,14 @@
+/* .form-label{
+    align-items:center;
+} */
+
+.main{
+    background-color: aqua;
+    height: 100vh;
+}
+
+form{
+    background: white;
+    border: 1px;
+    border-radius: 25px;
+}
